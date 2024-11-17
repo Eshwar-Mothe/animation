@@ -1,0 +1,329 @@
+body {
+    background-color: #3d3d3d;
+    font-family: sans-serif;
+}
+
+:root {
+    --bg: linear-gradient(#ffffff2c, #2f2f2f2f);
+}
+
+
+.container .card-item,
+.row2 *,
+.row3 *,
+.row4 * {
+    animation: appear ease;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes appear {
+    0% {
+        scale: 0.5;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.row1 .box1 {
+    width: 18rem;
+    height: 10rem;
+    background-color: brown;
+}
+
+.row1 .box2 {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(255, 238, 0);
+}
+
+.row1 .box3 {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(43, 61, 226);
+}
+
+.row1 .box4 {
+    width: 300px;
+    height: 150px;
+    background-color: blueviolet;
+}
+
+/* row 2 */
+
+.row2 .box2 {
+    width: 18rem;
+    height: 10rem;
+    background-color: rgb(27, 75, 71);
+}
+
+.row2 .box3 {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(0, 25, 105);
+}
+
+.row2 .box4 {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(226, 43, 43);
+}
+
+.row2.box1 {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(226, 43, 165);
+}
+
+/* row 3 */
+
+.row3 .box4 {
+    width: 18rem;
+    height: 10rem;
+    background-color: rgb(42, 165, 124);
+}
+
+.row3 .box1 {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(226, 198, 43);
+}
+
+.row3 .box2 {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(43, 226, 43);
+}
+
+.row3.box3 {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(226, 43, 195);
+}
+
+
+/* card Animation */
+
+.card {
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 20%;
+    padding: 30px 10px;
+    text-align: center;
+    max-height: 360px;
+    word-wrap: break-word;
+    background-color: #1c1c1c;
+    color: white;
+    position: relative;
+    border-radius: 6px;
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 90%, red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.card:hover::after,
+.card:hover::before {
+    animation: 2s spin infinite linear;
+
+}
+
+.card::before {
+    filter: blur(5rem);
+    opacity: 0.4;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+.row2 .box2 {
+    background: var(--bg),
+        url(bg.jpeg) no-repeat center center / cover;
+    width: 80%;
+    z-index: 999;
+    max-height: 360px;
+    padding: 30px 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+}
+
+.container,
+.card-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card5 {
+    background: var(--bg),
+        url(skull.jpg) no-repeat center center / cover;
+}
+
+.card2 {
+    background: var(--bg),
+        url(bg.jpeg) no-repeat center center / cover;
+}
+
+.card3 {
+    background: var(--bg),
+        url(lady.jpg) no-repeat center center / cover;
+}
+
+.card4 {
+    background: var(--bg),
+        url(moon.jpg) no-repeat center center / cover;
+}
+
+.card1 {
+    background: var(--bg),
+        url(flower.jpg) no-repeat center center / cover;
+}
+
+.card6 {
+    background: var(--bg),
+        url(tree.jpg) no-repeat center center / cover;
+}
+
+.card7 {
+    background: var(--bg),
+        url(veggies.jpg) no-repeat center center / cover;
+}
+
+.card8 {
+    background: var(--bg),
+        url(street.jpg) no-repeat center center / cover;
+}
+
+.card9 {
+    background: var(--bg),
+        url(candle.jpg) no-repeat center center / cover;
+}
+
+.card10 {
+    background: var(--bg),
+        url(autumn.jpg) no-repeat center center / cover;
+}
+
+.card11 {
+    background: var(--bg),
+        url(door.jpg) no-repeat center center / cover;
+}
+
+.card12 {
+    background: var(--bg),
+        url(basketball.jpg) no-repeat center center / cover;
+}
+
+.card1::after,
+.card1::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(0, 255, 128));
+}
+
+.card2::after,
+.card2::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(255, 0, 200));
+
+}
+
+.card3::after,
+.card3::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(0, 255, 21));
+
+}
+
+.card4::after,
+.card4::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(111, 164, 238));
+
+}
+
+.card5::after,
+.card5::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(255, 217, 0));
+
+}
+
+.card6::after,
+.card6::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(255, 0, 119));
+
+}
+
+.card7::after,
+.card7::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(255, 102, 0));
+
+}
+
+.card8::after,
+.card8::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(162, 0, 255));
+
+}
+
+.card9::after,
+.card9::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(0, 255, 221));
+
+}
+
+.card10::after,
+.card10::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(119, 0, 255));
+
+}
+
+.card11::after,
+.card11::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(229, 255, 0));
+
+}
+
+.card12::after,
+.card12::before {
+    background-image: conic-gradient(from var(--angle), transparent 90%, rgb(255, 0, 221));
+
+}
+
+h1,p{
+    transition: all .3s linear;
+}
+
+.card:hover h1, .card:hover p{
+    background: rgba( 33, 30, 30, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12.5px );
+-webkit-backdrop-filter: blur( 12.5px );
+border-radius: 10px;
+}
